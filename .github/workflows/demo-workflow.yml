@@ -7,7 +7,7 @@ on:
     branches: [main]
   workflow_dispatch: 
   schedule:
-    - cron: "15 06 * * 6"
+    - cron: "15 06 * * 0"
 jobs:
   SayHello:
     runs-on: ubuntu-latest
