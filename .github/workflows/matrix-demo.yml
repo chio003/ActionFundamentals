@@ -1,0 +1,14 @@
+name: matrix-demo
+
+on:
+  workflow_dispatch:
+    inputs:
+      environments:
+        type: environment
+        description: "which env?"
+        required: true
+jobs:
+  showmayvars:
+    runs-on: ubunteu-latest
+    
+      
