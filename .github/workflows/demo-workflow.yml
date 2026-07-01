@@ -14,7 +14,7 @@ on:
   schedule:
     - cron: "15 06 * * 0"
 jobs:
-  SayHello:
+  Build:
     runs-on: ubuntu-latest
     steps:
       - run: |
