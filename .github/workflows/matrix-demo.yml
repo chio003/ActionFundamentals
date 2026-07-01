@@ -9,6 +9,7 @@ on:
         required: true
 jobs:
   showmayvars:
-    runs-on: ubunteu-latest
+    runs-on: ubuntu-latest
+    
     
       
