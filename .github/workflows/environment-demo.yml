@@ -1,0 +1,21 @@
+name: environemnt-name
+
+on:
+  workflow_dispatch:
+    inputs:
+      type: environment
+      description: 
+        default: required: true
+jobs:
+  build:
+    run-on: ubuntu-latest
+    steps:
+      - run: echo "Build completed"
+  test:
+    runs-on: ubuntu-latest
+    need: build
+    environment: test
+    steps:
+      - run: echo ${{ vars.SERVICE_ACCOUNT_NAME }} ; echo ${{ secrets.SERVICE_ACCOUNT_PASSWORD }}
+      - if: ${{ inputs.environments == 'dev' }}
+        run: echo " ${{ inputes.ebvironments }} >> $GITHUB_STEP_SUMMARY
